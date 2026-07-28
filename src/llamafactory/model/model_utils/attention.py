@@ -113,3 +113,5 @@ def print_attn_implementation(config: "PretrainedConfig") -> None:
         logger.info_rank0("Using torch SDPA for faster training and inference.")
     else:
         logger.info_rank0("Using vanilla attention implementation.")
+
+# touch
