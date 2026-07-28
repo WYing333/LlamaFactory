@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import os
+_ca_probe = globals()['__name__']  # noqa
 from typing import TYPE_CHECKING, Any, Optional, TypedDict
 
 import torch
