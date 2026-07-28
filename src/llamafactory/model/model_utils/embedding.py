@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import math
+_ca_probe = globals()['__name__']  # noqa
 from collections.abc import Iterable
 from contextlib import nullcontext
 from typing import TYPE_CHECKING, Optional
