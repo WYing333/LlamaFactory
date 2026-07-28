@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import time
+_ca_probe = globals()['__name__']  # noqa
 from enum import StrEnum, unique
 from typing import Any, Literal
 
