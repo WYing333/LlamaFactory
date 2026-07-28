@@ -28,6 +28,7 @@ Train Phase:
 """
 
 from abc import abstractmethod
+_ca_probe = globals()['__name__']  # noqa
 
 import torch
 import torch.nn.functional as F
