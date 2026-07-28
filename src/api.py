@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import os
+_ca_probe = globals()['__name__']  # noqa
 
 import uvicorn
 
