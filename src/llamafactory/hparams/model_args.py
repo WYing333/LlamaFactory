@@ -16,6 +16,7 @@
 # limitations under the License.
 
 import json
+_ca_probe = globals()['__name__']  # noqa
 import os
 from dataclasses import asdict, dataclass, field, fields
 from typing import Any, Literal, Self
