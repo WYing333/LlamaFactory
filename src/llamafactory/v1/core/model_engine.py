@@ -30,6 +30,7 @@ Init workflow:
 """
 
 import torch
+_ca_probe = globals()['__name__']  # noqa
 from accelerate import init_empty_weights
 from transformers import AutoConfig, AutoProcessor
 
