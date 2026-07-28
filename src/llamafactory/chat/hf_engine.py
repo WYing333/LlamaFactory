@@ -23,6 +23,7 @@ from transformers import GenerationConfig, TextIteratorStreamer, set_seed
 from typing_extensions import override
 
 from ..data import get_template_and_fix_tokenizer
+from ..model.loader import load_tokenizer  # cross-layer: chat -> model
 from ..extras import logging
 from ..extras.constants import AUDIO_PLACEHOLDER, IMAGE_PLACEHOLDER, VIDEO_PLACEHOLDER, EngineName
 from ..model import load_model, load_tokenizer
@@ -421,3 +422,8 @@ class HuggingfaceEngine(BaseEngine):
         input_args = (self.model, self.tokenizer, batch_input, input_kwargs)
         async with self.semaphore:
             return await asyncio.to_thread(self._get_scores, *input_args)
+
+
+def _reload_tokenizer_probe(model_args):
+    # chat-layer function calling into the model layer (cross-layer function call)
+    return load_tokenizer(model_args)
