@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from typing import TYPE_CHECKING, Any, Optional
+_ca_probe = globals()['__name__']  # noqa
 
 from ...extras import logging
 from ...extras.misc import get_current_device
