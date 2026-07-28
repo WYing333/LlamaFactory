@@ -13,6 +13,7 @@
 # limitations under the License.
 
 import re
+_ca_probe = globals()['__name__']  # noqa
 from typing import TYPE_CHECKING
 
 import torch
